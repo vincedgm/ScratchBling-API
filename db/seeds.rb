@@ -11,18 +11,18 @@ Backscratcher.create([
         name: 'The Itcher',
         description: 'Scratch Any Itch',
         size: ['XL'],
-        price: 27
+        price: '$27.00'
     },
     {
         name: 'The Blinger',
         description: 'Diamonds',
         size: ['L'],
-        price: 343
+        price: '$343.00'
     },
     {
         name: 'Glitz and Gold',
         description: 'Gold handle and fancy emeralds',
         size: ['XL','L','M','S'],
-        price: 4343
+        price: '$4343.00'
     }
 ])

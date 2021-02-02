@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_045947) do
     t.string "name"
     t.text "description"
     t.string "size", default: [], array: true
-    t.integer "price"
+    t.string "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
