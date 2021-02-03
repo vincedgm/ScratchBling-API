@@ -44,7 +44,7 @@ class Api::V1::BackscratchersController < ApplicationController
 
     private
     def backscratcher_params
-        params.require(:backscratcher).permit(:name, :description, :size, :price)
+        params.require(:backscratcher).permit(:name, :description, :price, :size)
     end
 
     def find_backscratcher
