@@ -3,8 +3,8 @@ class CreateBackscratchers < ActiveRecord::Migration[6.1]
     create_table :backscratchers do |t|
       t.string :name
       t.text :description
-      t.string :size, array:true, default: []
       t.string :price
+      t.string :size, array:true, default: []
 
       t.timestamps
     end

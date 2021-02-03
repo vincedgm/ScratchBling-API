@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_045947) do
   create_table "backscratchers", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "size", default: [], array: true
     t.string "price"
+    t.string "size", array: true, default: []
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
