@@ -1,15 +1,18 @@
 class Api::V1::BackscratchersController < ApplicationController
     before_action :find_backscratcher, only: [:show, :update, :destroy]
 
+    #GET
     def index
         @backscratcher = Backscratcher.all
         render json: @backscratcher
     end
 
+    #GET
     def show
         render json: @backscratcher
     end
 
+    #POST
     def create
         @backscratcher = Backscratcher.new(backscratcher_params)
         if @backscratcher.save
@@ -19,6 +22,7 @@ class Api::V1::BackscratchersController < ApplicationController
         end
     end
 
+    #PUT
     def update
         if @backscratcher
             @backscratcher.update(backscratcher_params)
@@ -28,6 +32,7 @@ class Api::V1::BackscratchersController < ApplicationController
         end
     end
 
+    #DELETE
     def destroy
         if @backscratcher
             @backscratcher.destroy
@@ -38,7 +43,6 @@ class Api::V1::BackscratchersController < ApplicationController
     end
 
     private
-
     def backscratcher_params
         params.require(:backscratcher).permit(:name, :description, :size, :price)
     end
